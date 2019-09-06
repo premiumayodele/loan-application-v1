@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Futureview Loan - Products {% endblock %}
+{% block content %}
+    {% load static %}
+        <!-- This is the login Page<br> -->
+        <!-- <form method="POST" action=""> -->
+            <!-- {% csrf_token %} -->
+            <!-- {{ form.as_p }} -->
+            <!-- <button type="submit">Login</button> -->
+            <!-- </form> -->
+            <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="{% static 'images/signin-image.jpg' %}" alt="sing up image"></figure>
+                        <a href="/accounts/register" class="signup-image-link"><button type="button" class="btn btn-primary">Create an account</button></a>
+                    </div>
+
+                    <div class="signin-form">
+                        <h2 class="form-title">Sign in</h2>
+                        {% if form.errors %}
+                            <p style="color:red;font-size:17px">Invalid email or password!</p>
+                        {% endif %}
+                        <form method="POST" class="register-form" id="login-form">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                {{ form.username.errors }}
+                                <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <!-- <input type="text" name="your_name" id="your_name" placeholder="Your Name"/> -->
+                                {{ form.username}}
+                            </div>
+                            <div class="form-group">
+                                {{ form.password.errors }}
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <!-- <input type="password" name="your_pass" id="your_pass" placeholder="Password"/> -->
+                                {{ form.password }}
+                            </div>
+                            <!-- <div class="form-group">
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                            </div> -->
+                            <div class="form-group form-button">
+                                <button type="submit" class="btn btn-default">Login</button>
+                            </div>
+                        </form>
+                        <!-- <div class="social-login">
+                            <span class="social-label">Or login with</span>
+                            <ul class="socials">
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+    </div>
+{% endblock %}

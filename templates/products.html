@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Futureview Loan - Products {% endblock %}
+{% block content %}
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="page-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li><a href="/">Home</a></li>
+                            <li class="active">Our Loan Products</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                   <div class="bg-white pinside30">
+                        <div class="row">
+                           <div class="col-xl-4 col-lg-4 col-md-9 col-sm-12 col-12">
+                                <h1 class="page-title">Products</h1>
+                            </div>
+                            <!-- <div class="col-xl-8 col-lg-8 col-md-3 col-sm-12 col-12">
+                                <div class="row">
+                                       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="btn-action"> <a href="about.html#" class="btn btn-default">How To Apply</a> </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="sub-nav" id="sub-nav">
+                        <ul class="nav nav-justified">
+                            <li class="nav-item">
+                                <a href="/contact" class="nav-link">Give me call back</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a href="about.html#" class="nav-link">Emi Caculator</a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="wrapper-content">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="service-img-box mb30 text-center">
+                                <div class="service-img">
+                                    <a href="/loan/personal" class="imghover"><img src="{% static 'images/blog-img.jpg' %}" alt="Borrow - Loan Company Website Template " class="img-fluid"></a>
+                                </div>
+                                <div class="service-content bg-white pinside30 outline">
+                                    <h2><a href="/loan/personal" class="title">Personal Loan</a></h2>
+                                    <p>Discover flexible car financing options for new or used cars, and specialty vehicles nsequat fringi porta.</p>
+                                    <a href="/loan/personal" class="btn-link">Read more</a> </div>
+                            </div>
+                        </div>
+                       <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="service-img-box mb30 text-center">
+                                <div class="service-img">
+                                    <a href="/loan/home" class="imghover"><img src="{% static 'images/blog-img-1.jpg' %}" alt="Borrow - Loan Company Website Template " class="img-fluid"></a>
+                                </div>
+                                <div class="service-content bg-white pinside30 outline">
+                                    <h2><a href="/loan/home" class="title">Home Loan</a></h2>
+                                    <p>Lorem ipsum dolor sitamet secteture adipiscing eilit mauris diem lorem ipsum anibus atdsim eipit. </p>
+                                    <a href="/loan/home" class="btn-link">Read more</a> </div>
+                            </div>
+                        </div>
+                       <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="service-img-box mb30 text-center">
+                                <div class="service-img">
+                                    <a href="/loan/education" class="imghover"><img src="{% static 'images/blog-img-2.jpg' %}" alt="Borrow - Loan Company Website Template " class="img-fluid"></a>
+                                </div>
+                                <div class="service-content bg-white pinside30 outline">
+                                    <h2><a href="/loan/education" class="title">Education Loan</a></h2>
+                                    <p>Serlaoreet necroin lobortis diam sit rem sitamet urna porttitor lorem amesroces livose lorem anois.</p>
+                                    <a href="/loan/education" class="btn-link">Read more</a> </div>
+                            </div>
+                        </div>
+                       <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="service-img-box mb30 text-center">
+                                <div class="service-img">
+                                    <a href="/loan/business" class="imghover"><img src="{% static 'images/blog-img-3.jpg' %}" alt="Borrow - Loan Company Website Template " class="img-fluid"></a>
+                                </div>
+                                <div class="service-content bg-white pinside30 outline">
+                                    <h2><a href="/loan/business" class="title">Business Loan</a></h2>
+                                    <p>Etiam at urna ultricies, dignissim nunc vel, consequat dui. Morbi a nibh vitae arcu blannareare vestibulum. </p>
+                                    <a href="/loan/business" class="btn-link">Read more</a> </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="service-img-box mb30 text-center">
+                                <div class="service-img">
+                                    <a href="/loan/car" class="imghover"><img src="{% static 'images/blog-img-4.jpg' %}" alt="Borrow - Loan Company Website Template " class="img-fluid"></a>
+                                </div>
+                                <div class="service-content bg-white pinside30 outline">
+                                    <h2><a href="/loan/car" class="title">Car Loan</a></h2>
+                                    <p> Aenean pulvinar interdum commodo. Nam lobortis auctor odio, in imperdiet elintum gravida et ac ellus. </p>
+                                    <a href="/loan/car" class="btn-link">Read more</a> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

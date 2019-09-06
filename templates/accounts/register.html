@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Futureview Loan - Register {% endblock %}
+{% block content %}
+    {% load static %}
+    <div class="container">
+       <!-- <h2>Please register here</h2><br> -->
+       <div class="container">
+            <div class="signup-content">
+                <div class="signup-form">
+                    <h2 class="form-title">Sign up</h2>
+                    {% if form.errors %}
+                        <p style="color:red;font-size:17px">Please check the error below</p>
+                    {% endif %}
+                    <form method="POST">
+                        {% csrf_token %}
+                        <!-- {{ form.as_p }} -->
+                        <br><br/>
+                        {{ form.email }} {{ form.email.errors }}<br>
+                        {{ form.username }} {{ form.username.errors}}
+                        <br/>{{ form.password1 }} {{ form.password1.errors }}
+                        <br/>{{ form.password2 }}  {{ form.password2.errors }}
+                        {% if form.password1.errors %}
+                        <p style="color:red;font-size:17px">Something is wrong with password1</p>
+                        {% endif %}
+
+                        <!-- <div class="form-group">
+                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            {{ form.username }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.email.error }}
+                            <label for="email"><i class="zmdi zmdi-email"></i></label>
+                            {{ form.email }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.password1.error }}
+                            <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                            {{ form.password1 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.password2.error }}
+                            <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                            {{ form.password2 }}
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" required />
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                        </div> -->
+                        <div class="form-group form-button">
+                            <button type="submit" class="btn btn-default">Sign up</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="signup-image">
+                    <figure><img src="{% static 'images/signup-image.jpg' %}" alt="sing up image"></figure>
+                    <a href="/accounts/login"><button class="btn btn-primary">Login</button></a>
+                </div>
+            </div>
+        </div>
+         <!-- <div class="row main">
+            <div class="panel-heading">
+                <div class="panel-title text-center">
+                    <h1 class="title">Register Here</h1>
+                    <hr />
+                </div>
+            </div>
+            <div class="main-login main-center pt-">
+                <form class="form-horizontal" method="post" action="#">
+                    <div class="form-group pt-10">
+                        <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username" class="cols-sm-2 control-label">Username</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="cols-sm-2 control-label">Password</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <button type="button" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div> -->
+    </div>
+{% endblock %}
